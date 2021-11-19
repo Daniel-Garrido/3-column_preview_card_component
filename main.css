@@ -1,0 +1,164 @@
+/*selectores universales */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --Bright-orange: hsl(31, 77%, 52%);
+    --Dark-cyan: hsl(184, 100%, 22%);
+    --Very-dark-cyan: hsl(179, 100%, 13%);
+}
+
+/******ESTILOS GENERALES AL CUERPO DE MI PAGINA*********/
+/***********ESTILOS AL H1******/
+h1 {
+    font-family: 'Lexend Deca', sans-serif;
+    text-transform: uppercase;
+    color: white;
+}
+
+/********ESTILOS A LOS PARRAFOS******/
+p{
+    font-size: 14px;
+    font-family: 'Lexend Deca', sans-serif;
+    color: white;
+    line-height: 2.5;
+    padding-top: 15%;
+    padding-bottom: 25%; 
+}
+
+/**********CAJA DEL MAIN******************/
+main{
+    /********UTILIZAMOS FLEXBOX****************/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+/*************CONTENEDOR PRINCIPAL***********/
+/*************este es el padre**************/
+.contenedor{
+    /*********UTILIZAMOS FLEXBOX**************/
+    display: flex;
+    width: 120vh;
+    height: 70%;
+    border-radius: 10px;/*le agrega un borde al contenedor principal*/
+    overflow: hidden;
+}
+
+/***************ESTILOS A LAS CAJAS************************/
+.caja{
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    align-items: right;
+    padding: 5%;
+
+}
+/********COLORES DE FONDO A LAS 3 CAJAS********************/
+#caja1{
+    background: var(--Bright-orange);
+}
+
+#caja2 {
+    background: var(--Dark-cyan);
+}
+#caja3{
+    background: var(--Very-dark-cyan);
+}
+
+/**ESTILOS A LAS IMAGENES DE LA PAGINA **/
+img{
+    width: 30%;
+    padding-bottom: 10%;
+}
+
+/************LE PONEMOS EL MISMO ESTILO A LOS BOTONES************/
+.btn1 , .btn2 , .btn3 {
+    font-size: 16px;
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: bold;
+    width: 65%;
+    height: 40px;
+    background: white;
+    border: none;
+    border-radius: 20px;
+}
+
+/*******************COLORES DE LOS BOTONES ************************/
+/*BOTON 1*/
+.btn1 {
+    color: var(--Bright-orange);
+}
+/*******************HOVER DEL BOTON 1************************/
+.btn1:hover {
+    transition: all 0.3s;
+    border: 2px solid white;
+    background: var(--Bright-orange);
+    color: white;
+}
+
+/*BOTON 2*/
+.btn2 {
+    color: var(--Dark-cyan);
+}
+
+/*************HOVER DEL BOTON 2***********/
+.btn2:hover {
+    transition: all 0.3s;
+    border: 2px solid white;
+    background: var(--Dark-cyan);
+    color: white;
+}
+
+/*BOTON 3*/
+.btn3{
+    color: var(--Very-dark-cyan);
+}
+
+/************HOVER  DEL BOTON 3 ***************/
+.btn3:hover {
+    transition: all 0.3s;
+    border: 2px solid white;
+    background: var(--Very-dark-cyan);
+    color: white;
+}
+
+/**********************PIE DE PAGINA ********************************/
+footer {
+    font-size: 18px;
+    text-align: center;
+  }
+  footer a {
+    color: hsl(228, 45%, 44%);
+  }
+
+/***********************RESPONSIVE DESING********************************/
+@media (max-width: 650px){
+    /*le damos responsive al contenedor de mi caja */
+    .contenedor {
+        flex-direction: column;
+        align-items: center;
+        margin: 50px auto;/*le agregamos un margen a alto y ancho*/
+    
+    }
+    /* a las cajas le damos un ancho maximo y minimo*/
+    .caja {
+        max-width: 100%;
+        min-width: 50%;
+    }    
+    /*el ancho lo dejamos en automatico*/
+    main {
+        height: auto;
+    }
+    /*le damos bordes al contenedor*/
+    #caja1 {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+    #caja3 {
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+}
